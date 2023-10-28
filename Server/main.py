@@ -83,22 +83,6 @@ CORS(app, origins="*")
 
 @app.route('/question', methods=['POST'])
 def question():
-    # try:
-    #     data = request.json
-    #     question = data.get('question')
-    #     if not question:
-    #         return jsonify({'error': 'Missing question parameter'}), 400
-
-    #     result = sql_agent({'input': f"{prompt}. {question}"})
-    #     print("result:-", result)
-    #     intermediate_steps = result['intermediate_steps']
-    #     print("intermediate_steps:-", intermediate_steps)
-    #     return jsonify({"result": result.get("output")})
-    #     # return jsonify({'result': result})
-
-    # except Exception as e:
-    #     return jsonify({'error': str(e)}), 500
-
     try:
         data = request.json
         question = data.get('question')
@@ -108,20 +92,7 @@ def question():
 
         if "Hi" in question:
             result = llm_chain.run(input_values)
-            return jsonify({"result": result})
-        
-        # elif "HI" in question:
-        #     result = llm_chain.run(input_values)
-        #     return jsonify({"result": result})
-        
-        # elif "hi" in question:
-        #     result = llm_chain.run(input_values)
-        #     return jsonify({"result": result})
-        
-        # elif "Hey" in question:
-        #     result = llm_chain.run(input_values)
-        #     return jsonify({"result": result})
-        
+            return jsonify({"result": result})        
 
         result = sql_agent(f"{prompt}. {question}")
         queryOutput = result['output']
@@ -139,7 +110,6 @@ def question():
             return jsonify({"response": "Sorry, please try again"})
 
         else:
-            # print(error_message)
             return jsonify({"response": "Sorry, please try again", "error_message": error_message})
 
 
