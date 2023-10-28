@@ -1,0 +1,257 @@
+* {
+  /* overflow: hidden; */
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* home container */
+
+.homeContainer {
+  /* background-color: rgb(52,53,65); */
+  height: 100vh;
+}
+
+.innerContainer {
+  color: whitesmoke;
+  height: 100vh;
+  /* background-color: #AEBCBD; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatBoxContainer {
+  height: 80vh;
+  overflow-y: scroll;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainChatContainer {
+  box-shadow: 1px 10px 10px rgba(89, 89, 89, 0.721);
+  /* background-color: rgba(169, 169, 169, 0.813); */
+  background-color: white;
+  margin-bottom: 3.8%;
+  /* margin-top: 0.7%; */   
+}
+
+
+.inputBoxOuterContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  padding-top: 1%;
+}
+
+.inputBoxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(160, 159, 159, 0.836);
+  width: 90%;
+  height: 7vh;
+  border-radius: 5px;
+}
+
+.inputBox {
+  all: unset;
+  width: 95%;
+  padding: 1%;
+  height: 100%;
+  font-family: sans-serif;
+  /* background-color: white; */
+  color: rgba(0, 0, 0, 0.879);
+}
+
+.iconContainer {
+  cursor: pointer;
+}
+
+.sendIcon {
+  color: rgba(0, 0, 0, 0.555);
+}
+
+.chatContainerMessageRes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.Message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0%;
+  background-color: #de2137cd;
+}
+
+.Message span {
+  width: 90%;
+  font-size: large;
+  padding: 1% 0%;
+}
+
+.botMessage {
+  /* background-color: rgb(38, 39, 45); */
+  background-color: rgb(230, 230, 230);
+  color: black;
+  width: 100%;
+  padding: 1% 0%;
+
+  -webkit-box-shadow: 0px 3px 16px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 16px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 8px 1px rgba(159, 159, 159, 0.75);
+}
+
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.loading span {
+  animation: blink 1s linear infinite;
+}
+
+.messageIconContainer {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tableContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 0% 1%;
+  justify-content: space-between;
+}
+
+.tableContainer tbody{
+  max-height: 300px;
+  overflow-y: scroll;
+  background-color: whitesmoke;
+}
+
+.tableContainer thead,tbody{
+  border: 1px solid #8b8b8b;
+  border-collapse: collapse;
+}
+
+.tableContainer thead {
+  background-color: #8dbcbcd3;
+  padding: 2px;
+}
+
+.tableContainer tbody tr,
+.tableContainer thead tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tableContainer th, .tableContainer td {
+  text-align: left;
+  padding: 5px;
+}
+
+.tableContainer tbody tr {
+  border-bottom: 1px solid #8b8b8b;
+}
+
+.tableContainer tbody tr:hover {
+  background-color: #b1b1b1e4;
+}
+
+.tableContainer th, .tableContainer td {
+  margin: 1px;
+}
+
+.tableContainer th {
+  text-align: center;
+} 
+
+.tableContainer td{
+  margin: 2px;
+}
+.tableContainer tbody::-webkit-scrollbar {
+  width: 5px; 
+}
+
+.tableContainer tbody::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+.tableContainer tbody::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 2px;
+}
+
+.tableContainer tbody::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.userIcon{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+.useIconn{
+  font-size: x-large;
+}
+
+.botMsgContainer{
+  width: 90%;
+}
